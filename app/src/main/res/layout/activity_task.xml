@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TaskActivity">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:showDividers="middle"
+            android:divider="@drawable/empty_tall_divider"
+            android:padding="10dp"
+            android:id="@+id/linearLayout">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      >
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_name"
+                    android:layout_marginBottom="5dp"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    android:ems="10"
+                    android:id="@+id/editTaskName" android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+        >
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_time"
+                    android:layout_marginBottom="5dp"/>
+
+            <Spinner
+                    android:id="@+id/start_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:prompt="@string/spinner_title"/>
+        </LinearLayout>
+
+        <TimePicker android:id="@+id/tp_start"
+                    android:layout_width="match_parent"
+                    android:timePickerMode="spinner"
+                    android:layout_height="wrap_content" >
+        </TimePicker>
+
+        <Button android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/offer_free_time" android:id="@+id/offer_free_time_button"
+                android:onClick="onClickOfferFreeTime"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+        >
+            <Spinner
+                    android:id="@+id/time_end_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight=".50"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:prompt="@string/spinner_title"/>
+
+            <Spinner
+                    android:id="@+id/end_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight=".50"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:prompt="@string/spinner_title"/>
+        </LinearLayout>
+
+        <TimePicker android:id="@+id/tp_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:timePickerMode="spinner">
+        </TimePicker>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+        >
+            <Button android:layout_width="0dp"
+                    android:layout_weight=".50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create" android:onClick="onClickCreateButton"/>
+            <Button android:layout_width="0dp"
+                    android:layout_weight=".50"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:onClick="onClickCancelButton"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView >

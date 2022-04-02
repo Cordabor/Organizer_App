@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Учет и планирование времени</string>
+    <string name="title_activity_task">Задача</string>
+    <string name="spinner_title">Title</string>
+    <string name="start_time">Время начала выполнения:</string>
+    <string name="create">Создать</string>
+    <string name="cancel">Отмена</string>
+    <string name="task_name">Название дела</string>
+    <string name="offer_free_time">Предложить свободное время</string>
+    <string name="time_for_task">Время на выолнение дела</string>
+    <string name="free_time">Свободное время</string>
+    <string name="ok">OK</string>
+    <string name="change">Изменить</string>
+    <string name="back">Назад</string>
+    <string name="remove">Удалить</string>
+    <string name="CancelTask">Отменить дело</string>
+    <string name="predicted_time">Спрогнозированное время</string>
+    <string name="change_with_move">Изменить со сдвигом других дел</string>
+
+</resources>

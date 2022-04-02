@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SettingsActivity">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+
+        <Switch android:id="@+id/switch_start_task_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Уведомление о начале дела"
+                android:padding="10dp"
+                android:onClick="onClickStartTaskNotification"
+                />
+
+        <Switch android:id="@+id/switch_start_task_sound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Звуковой сигнал для уведомления о начале дела"
+                android:padding="10dp"
+                android:onClick="onClickStartTaskSound"
+        />
+
+        <Switch android:id="@+id/switch_end_task_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Уведомление о окончании дела"
+                android:padding="10dp"
+                android:onClick="onClickEndTaskNotification"
+        />
+
+        <Switch android:id="@+id/switch_end_task_sound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Звуковой сигнал для уведомления о окончании дела"
+                android:padding="10dp"
+                android:onClick="onClickEndTaskSound"
+        />
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Выбрать звуковой файл для начала дела"
+                android:onClick="onClickChooseStartSound"
+        />
+
+        <TextView
+                android:id="@+id/text_view_sound_start_path"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Путь к файлу"
+        />
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Выбрать звуковой файл для окончания дела"
+                android:onClick="onClickChooseEndSound"
+        />
+
+        <TextView
+                android:id="@+id/text_view_sound_end_path"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Путь к файлу"
+        />
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_navigation"
+            android:background="?android:attr/windowBackground"/>
+</RelativeLayout>
